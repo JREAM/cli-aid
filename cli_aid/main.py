@@ -6,11 +6,15 @@ from __future__ import print_function
 import os
 import sys
 
-# Current Version
-VERSION=0.01
-
 # Path to topic files
+# @TODO get path below for dir
 PATH_TOPICS = 'topics'
+
+
+# @TODO: This will be the entrypoint specified in setup.cfg
+def cli():
+    """@TODO Entrypoint."""
+    print("do something")
 
 # Get the CLI Args
 if len(sys.argv) == 1:

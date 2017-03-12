@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Setting up symlink to cli_aid"
+ln -sf /usr/share/python/cli_aid/bin/cli_aid /usr/local/bin/cli_aid

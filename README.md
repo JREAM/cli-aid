@@ -3,7 +3,7 @@ This is a Python 2.6/2.7 package to be used in your command line to easily assis
 
 _[Soon to be Python3 compatible as well.]_
 
-> **STATUS**: In Development
+> **STATUS**: In Development [PIP Packaging](https://packaging.python.org/distributing/)
 
 <!-- TOC -->
 
@@ -33,8 +33,8 @@ The greatest benefit is that you can build your own snippet library easily withi
 - **TOPICS**: Where methods define help instructions
     - **SERVICE**: The first command you want information about (eg: git, find, etc)
     - **COMMAND**: The second command to look up with a service, for example:
-        - `./cli-aid.py <service> <command>`
-        - `./cli-aid.py git submodule`
+        - `./cli_aid.py <service> <command>`
+        - `./cli_aid.py git submodule`
 - **MODULE**: There is only one module: `topics`, which stores all of your items.
 
 
@@ -43,9 +43,9 @@ The greatest benefit is that you can build your own snippet library easily withi
 Adding a topic is very easy. You should look at `topics/demo.py` for an example. To se the output in action, try these three commands:
 
 ```sh
-./cli-aid.py demo basic        ; A text output
-./cli-aid.py demo standard     ; A dictionary output
-./cli-aid.py demo wrong        ; An error output
+./cli_aid.py demo basic        ; A text output
+./cli_aid.py demo standard     ; A dictionary output
+./cli_aid.py demo wrong        ; An error output
 ```
 
 
@@ -63,8 +63,8 @@ Adding a topic is very easy. You should look at `topics/demo.py` for an example.
 If I wanted to create an example topic I would first figure out the commands I want to remember. So for mysql I may want to be able to type:
 
 ```sh
-./cli-aid.py mysql connect
-./cli-aid.py mysql tricks
+./cli_aid.py mysql connect
+./cli_aid.py mysql tricks
 ```
 
 To accomplish this is very easy:
@@ -104,8 +104,8 @@ def tricks():
 That's it, now you should be able to run it, try it out!
 
 ```sh
-./cli-aid.py mysql connect
-./cli-aid.py mysql tricks
+./cli_aid.py mysql connect
+./cli_aid.py mysql tricks
 ```
 
 
@@ -118,16 +118,16 @@ If you have the desire to contribute the goal to keep in mind is this:
 - Would like to do/Plans:
     - Unit Testing
     - Should user have ability to easily create new topics/details? For example:
-        - `./cli-aid.py save java install "This is how to install java, etc."` (save would create/update)
-        - `./cli-aid.py save nginx config "flags: -y auto yes"`
-        - `./cli-aid.py save nginx config "commands: Anything here like a textfield"`
+        - `./cli_aid.py save java install "This is how to install java, etc."` (save would create/update)
+        - `./cli_aid.py save nginx config "flags: -y auto yes"`
+        - `./cli_aid.py save nginx config "commands: Anything here like a textfield"`
         - The above seems hard to format in one line unless it's basic text. However, using the save method could keep adding to the same file, but removing items would be problematic with string searching to the exact wording they wrote in the past.
         - I think if the user is using CLI they are good enough to simply `vim topics/their-file.py`.
     - More/Better Error Proofing
     - Possibly a better syntax or format for the topic files
     - Python 3 compatible
     - One argument produces a list of method names within the topic (module).
-    - A nice shortname rather than `cli-aid`
+    - A nice shortname rather than `cli_aid`
         - Some name ideas:
             - `snippette` (too long)
             - `snipr` (too much typing, sounds like sniper)
@@ -135,7 +135,7 @@ If you have the desire to contribute the goal to keep in mind is this:
             - `hlp` (I kind of like, easy to type and remember, something to do with 'help' seems best)
             - `assist` (seems nice, like when typing `assist mysql connect` )
             - `aid` (I really like this, `aid php config`, may be under the [id-utils](https://www.gnu.org/software/idutils/manual/idutils.html) package though  has this alias which runs `lid -ils` )
-                - maybe even `cli-aid`, `cli-aid find list`
+                - maybe even `cli_aid`, `cli_aid find list`
             - `ayd` (sounds like aid, not as easy to type)
             - `hh` (short to type, might fight with an alias, also doesn't explain much)
     - Complete the Install Script, so it can be run from a nice name, eg: `$ hlp js snippets` with out disrupting any other system commands or common words.

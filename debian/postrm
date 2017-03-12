@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Removing symlink to cli_aid"
+rm /usr/local/bin/cli_aid
