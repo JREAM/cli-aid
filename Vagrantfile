@@ -5,8 +5,8 @@ Vagrant.configure(2) do |config|
 
   config.vm.synced_folder ".", "/cli_aid"
 
+  config.vm.box = "debian/contrib-jessie64"
   config.vm.define "debian" do |debian|
-    debian.vm.box = "debian/jessie64"
     debian.vm.provision "shell", inline: <<-SHELL
     echo "-> Building DEB"
     sudo apt-get update
